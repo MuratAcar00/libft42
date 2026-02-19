@@ -6,7 +6,7 @@
 /*   By: muracar <muracar@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 21:29:46 by muracar           #+#    #+#             */
-/*   Updated: 2026/02/04 21:29:46 by muracar          ###   ########.fr       */
+/*   Updated: 2026/02/17 01:55:12 by muracar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: muracar <muracar@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 19:32:53 by muracar           #+#    #+#             */
-/*   Updated: 2026/02/03 19:32:53 by muracar          ###   ########.fr       */
+/*   Updated: 2026/02/17 01:54:31 by muracar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-    int		i;
-    char	ch;
+	int		i;
+	char	ch;
 
-    ch = (char)c;
-    i = ft_strlen(s);
-    while (i >= 0)
-    {
-        if (s[i] == ch)
-            return ((char *)(s + i));
-        i--;
-    }
-    return (NULL);
+	ch = (char)c;
+	i = ft_strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == ch)
+			return ((char *)(s + i));
+		i--;
+	}
+	return (NULL);
 }

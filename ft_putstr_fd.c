@@ -6,7 +6,7 @@
 /*   By: muracar <muracar@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 21:30:17 by muracar           #+#    #+#             */
-/*   Updated: 2026/02/04 21:30:17 by muracar          ###   ########.fr       */
+/*   Updated: 2026/02/17 01:52:02 by muracar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-    if (!s)
-        return ;
-    write(fd, s, ft_strlen(s));
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

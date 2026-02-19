@@ -6,17 +6,17 @@
 /*   By: muracar <muracar@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 18:52:35 by muracar           #+#    #+#             */
-/*   Updated: 2026/02/03 18:52:35 by muracar          ###   ########.fr       */
+/*   Updated: 2026/02/17 01:42:42 by muracar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-    {
-        return (c + 32);
-    }
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (c + 32);
+	}
+	return (c);
 }

@@ -6,39 +6,32 @@
 /*   By: muracar <muracar@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 11:41:31 by muracar           #+#    #+#             */
-/*   Updated: 2026/02/03 11:41:31 by muracar          ###   ########.fr       */
+/*   Updated: 2026/02/17 01:46:24 by muracar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t sz)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	d;
-	size_t	s;
+	size_t	dst_len;
+	size_t	src_len;
 	size_t	i;
 
-	d = 0;
-	s = 0;
-	while (dst[d] && d < sz)	// dst uzunluğunu sz sınırıyla ölç
-	{
-		d++;
-	}
-	while (src[s])	// src toplam uzunluğunu ölç
-	{
-		s++;
-	}
-	if (d == sz)	// Eğer sz, dst uzunluğundan küçük veya eşitse
-	{
-		return (sz + s);
-	}
+	dst_len = 0;
+	src_len = 0;
 	i = 0;
-	// Yer olduğu sürece (sz - 1'e kadar) kopyala
-	while (src[i] && (d + i + 1) < sz)
+	while (dst_len < dstsize && dst[dst_len])
+		dst_len++;
+	while (src[src_len])
+		src_len++;
+	if (dst_len == dstsize)
+		return (dstsize + src_len);
+	while (src[i] && dstsize - 1 > i + dst_len)
 	{
-		dst[d + i] = src[i];
+		dst[dst_len + i] = src[i];
 		i++;
 	}
-	dst[d + i] = '\0';
-	return (d + s);	// Oluşturulmak istenen toplam uzunluk
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
